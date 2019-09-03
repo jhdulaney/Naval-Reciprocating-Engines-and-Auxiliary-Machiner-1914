@@ -8,7 +8,9 @@
 \usepackage{caption}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{geometry}
+\usepackage[showframe]{geometry}
+\usepackage{textcomp}
+\usepackage{gensymb}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage[utf8]{inputenc}
@@ -30,6 +32,8 @@
 }
 [\vspace{-1ex}]
 
+\titleformat{\section}[runin]{\bf}{\enspace}{0em}{}
+
 \overfullrule=2cm
 
 
@@ -42,12 +46,12 @@
 
 
 \chapter{Work---Energy---Power}
-\textbf{Work} consists in overcoming resistance through space; the
+\section{Work} consists in overcoming resistance through space; the
 result of the exertion of force through a certain distance.  In order
 that work may be done there must be, not only a force, but also a
 motion.\par
 
-\textbf{Energy} is defined as the power or capacity of bodies for
+\section{Energy} is defined as the power or capacity of bodies for
 doing work, and a body has more energy the more work it can do without
 regarding time.  A force acting through space can be said to exert
 energy, but when this is applied and a resistance overcome through a
@@ -75,13 +79,13 @@ applied in measuring the work done by engines, and for which the
 indicator is used.  (See Chapter X, The Indicator and the Indicator
 Diagram.)\par
 
-\textbf{Power.---}The power of an engine involves the element of time,
+\section{Power.}The power of an engine involves the element of time,
 and is measured by the rate at which it can do work, and is the amount
 of work done in a unit of time.\par
 
 In engineering calculations, the unit of power adopted is the
 \textit{horse power} which represents the performance of 33,000
-foot-pounds of work per minute or 550 fout-pounds of work per second.
+foot-pounds of work per minute or 550 foot-pounds of work per second.
 Since the heat unit is equal to 778 units of work, one horse power is
 equal to $33,000 \div 778 = 42.42$ B. T. U. per minute.\par
 
@@ -89,7 +93,7 @@ equal to $33,000 \div 778 = 42.42$ B. T. U. per minute.\par
   Horse\:Power = \frac{Work\:done}{33,000 \times time\:in\:minutes.}
 \end{equation*}
 
-\textbf{Energy} is defined as the capacity for doing work and must not
+\section{Energy} is defined as the capacity for doing work and must not
 be confused with \textit{Power}.  A body is said to contain more
 energy the more work it can do regardless of time.  One ton of coal on
 being burnt in the furnace of a boiler can produce steam for
@@ -104,7 +108,7 @@ work, some passes to waste in various ways, but the sum of the heat
 usually employed plus the heat carried to waste always equals
 precisely the heat evolved from the source.\par
 
-\textbf{Efficiency.---}Of the entire energy received by an engine,
+\section{Efficiency.}Of the entire energy received by an engine,
 some is utilized in the production of useful work and the rest is lost
 or wasted, in overcoming the friction for instance, and in various
 other ways.  The ratio of useful work done to that of the energy
@@ -136,7 +140,7 @@ that only 60 to 70 per cent of the total energy of the fuel is
 converted into useful work.  After steam leaves the boiler further
 losses are experienced as the steam traverses the cylinders, due to
 radiation, incomplete expansion, the action of the cylinder walls, and
-principaly the heat carried to waste in the condenser.  The ratio of
+principally the heat carried to waste in the condenser.  The ratio of
 the effective work performed on the piston to the total heat contained
 in the steam does not amount to more than from 10 to 20 per cent.\par
 
@@ -200,10 +204,10 @@ the same action in each cylinder successively.  The cylinders, valves,
 and pistons increase in size for each additional cylinder, and a
 condenser is always used, the reasons for which will be shown later.
 The pipes, \textit{h}, \textit{i} and other spaces connected the
-exhaust side of one cylinder to the steam admission of th enext,
+exhaust side of one cylinder to the steam admission of the next,
 \textit{are called receivers}.\par
 
-Engines in which hte steam passes successively through two, three, or
+Engines in which the steam passes successively through two, three, or
 four cylinders are called \textit{double}, \textit{triple}, and
 \textit{quadruple} expansion engines, the first one being commonly
 called a \textit{compound} engine.  The cylinder which receives the
@@ -218,5 +222,78 @@ designated the 1st I. P., and the next one as the 2d I.P.\par
 In the condenser, the steam is converted into water, which with any
 air is removed by means of the \textit{air pump A} and returned to the
 boiler through a \textit{feed tank} and by the \textit{feed pump F}.\par
+
+\chapter{The Action of the Steam.}
+
+From the definition, the efficiency of the steam is simply the ratio
+of the energy exerted by the steam to the heat required to produce it,
+and since the difference between the amounts of heat utilized to
+obtain the same weight of steam at different pressures is so slight,
+the question of economy is only that of obtaining the greatest amount
+of work from a given weight of steam.\par
+
+From the formula for total heat of steam, it will be seen that the
+amount of heat required to convert one pound of water from a
+temperature of 100\degree{} into steam of 60 pounds pressure, is about
+1115 thermal units, and to convert the same quantity of water, at the
+same temperature, into steam at 200 pounds pressure, is 1140 thermal
+units, only $2\frac{1}{2}$ per cent greater heat required for three
+times the pressure.  This fact is utilized in modern engines by the
+employment of high pressures and expansion, with a consequent increase
+of work from the same weight of steam.\par
+
+A well-known formula and theorem of thermodynamics, showing the
+maximum efficiency of steam, is represented by\par
+
+\begin{equation*}
+  E = \frac{T_1 - T_2}{T_1} = \frac{t_1 - t_2}{t_1 + 461}
+\end{equation*}
+
+\noindent{} where $T_1 =$ initial absolute temperature; $t_1 =$
+initial temp. F.; $T_2 =$ final absolute temperature; $t_2 =$ final
+temperature F.\par
+
+That is, the greatest possible efficiency of any heat engine depends
+only upon the highest and lowest temperatures between which it is
+worked, and is independent of the nature of the working substance.
+The higher the temperature and pressure of the working fluid supplied
+and the lower that at which it is rejected, the higher will be the
+efficiency of the engine.\par
+
+Taking the case of a modern engine working with saturated steam of an
+initial pressure of 250 pounds per gauge, at the engine, approximately
+265 pounds absolute, and exhausting into a condenser in which there is
+an absolute pressure of 3 pounds per square inch, approximately equal
+to a vacuum of 24 inches, the corresponding initial and final
+temperatures will be 401\degree{}F. and 141\degree{}F., assuming that
+there is no difference between the back pressure or pressure on the
+exhaust side of the piston and the pressure in the condenser.\par
+
+Then, Maximum Efficiency $=\frac{401 - 141}{862} = .301$.\par
+
+That is, even if the total heat of the saturated steam admitted at a
+temperature of 401\degree{}F. could be so utilized in work in the
+engine, that, when the steam leaves the engine, it would carry away
+only the total heat due to the temperature of 141\degree{}F., the
+greatest possible amount of heat utilized would be only about
+one-third of that supplied.  It would be, therefore, impossible to
+reduce the loss, even in an ideally perfect engine, below 70 per cent
+for the temperature range given above.  But in the actual engine the
+ideal conditions are not reached, due to losses which will be taken up
+later, so that instead of a loss of 70 per cent, practically it
+amounts to 75 or 85 per cent, making the efficiency of a good steam
+engine only from 15 to 25 per cent.\par
+
+\section{Methods of Increasing Efficiency.}To increase the range of
+temperature and hence the efficiency, the value of $t_1$ has been
+successively raised, as boilers could be designed to withstand the
+increased pressures, from the former low pressures of 25 and 30 pounds
+up to 250 and 300 pounds of the present day.  In looking for a
+reduction of $t_2$, it is impossible with a non-condensing engine, or
+one exhausting into the atmosphere, to obtain a much smaller back
+pressure than 18 or 19 pounds absolute, or 3 to 4 pounds above the
+pressure of the atmosphere, owing to the friction in pipes and
+passages and the speed of the engine.  The lower value of $t_2$ in the
+non-condensing engine is consequently limited to 220\degree{} F.\par
 
 \end{document}
