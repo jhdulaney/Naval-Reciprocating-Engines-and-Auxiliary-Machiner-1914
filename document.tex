@@ -8,15 +8,20 @@
 \usepackage{caption}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[showframe]{geometry}
+\usepackage[]{geometry}
 \usepackage{textcomp}
 \usepackage{gensymb}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
 \usepackage{titlesec}
 
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.16,samples=100}
 
 \geometry{a5paper}
 \nonfrenchspacing
@@ -356,5 +361,66 @@ each stroke.\par
 
 By closing the indicator cock to the cylinder and opening to the
 atmosphere, the atmospheric line \textit{GH} is drawn.\par
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ticks=none,
+        xmin=-2,
+        xmax=12,
+        ymin=-2,
+        ymax=12,
+        axis x line=none,
+        axis y line=none,
+      ]
+      \addplot[black,thick, domain=1.5:10]{15/x};
+      \addplot[black, thick, domain=0:10]coordinates{(0,10)(1.5,10)};
+      \addplot[black, thick, domain=0:10]coordinates{(10,0)(10,1.5)};
+      \addplot[black, thick, domain=0:10]coordinates{(10,0)(0,0)};
+      \addplot[black, thick, domain=0:10]coordinates{(0,0)(0,10)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(1.5,10)(10,10)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(10,10)(10,1.5)};
+      \addplot[black, name path=ncbp, thin, domain=0:10]coordinates{(0,1.1)(10,1.1)};
+      \addplot[black, name path=cbp, thin, domain=0:10]coordinates{(0,.4)(10,.4)};
+      \addplot[black, thin, domain=-1:11]coordinates{(-.5,.75)(10.5,.75)};
+      \addplot[thick, color=black, fill=black, pattern=north east lines,]
+        fill between[of=ncbp and cbp, soft clip={domain=0:10},];
+      \node at (axis cs:10.5,10) {A'};
+      \node at (axis cs:1.5,10.5) {A};
+      \node at (axis cs:-.5,10) {P};
+      \node at (axis cs:-.3,1.2) {J};
+      \node at (axis cs:-.9,.75) {G};
+      \node at (axis cs:-.3,.3) {D};
+      \node at (axis cs:0,-.5) {O};
+      \node at (axis cs:10,-.5) {V};
+      \node at (axis cs:10.3,.3) {E};
+      \node at (axis cs:10.9,.75) {H};
+      \node at (axis cs:10.3,1.2) {K};
+      \node at (axis cs:10.3,1.9) {B};
+    \end{axis}
+  \end{tikzpicture}
+  \caption*{\textsc{Fig.\ 2.}}
+\end{figure}
+
+In engine calculations, the pressures used are absolute steam
+pressures or pressures measured from the zero line or line of no
+pressure, and should be distinguished from \textit{pressures by
+  gauge}, which latter are simply steam pressures above that of the
+atmosphere, and are those pressures indicated by the readings on the
+ordinary pressure gauges.\par
+
+Since hte indicator diagram is merely a diagram of work, its length
+shows the distance moved through by the piston, while the effective
+force is the excess of the mean forward pressure against the piston on
+one side, during admission and expansion, above the mean back pressure
+on the other side, as the exhaust steam passes to the condenser.
+Hence the area of the entire diagram \textit{OPABV}, minus the area of
+back pressure \textit{ODEV}, represents to scale the effective work
+done on one side of the piston.  A similar diagram taken from the
+other end of the cylinder shows the work done on the other side during
+the double stroke.\par
+
+
 
 \end{document}
