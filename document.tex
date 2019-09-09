@@ -2,6 +2,7 @@
 
 % This is a transcription done by Mairi Dulaney of Seattle, WA
 
+% chktex-file 18
 
 \usepackage{amsmath}
 \usepackage{caption}
@@ -187,7 +188,7 @@ the end of which is secured the \textit{propeller}.  The water in
 which the latter turns and engine friction form the chief resistance
 which the steam acting on \textit{P} has to overcome.\par
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.5]{fig_1.jpg}
   \caption*{\textsc{Fig.\ i.}}
@@ -409,7 +410,7 @@ pressure, and should be distinguished from \textit{pressures by
 atmosphere, and are those pressures indicated by the readings on the
 ordinary pressure gauges.\par
 
-Since hte indicator diagram is merely a diagram of work, its length
+Since the indicator diagram is merely a diagram of work, its length
 shows the distance moved through by the piston, while the effective
 force is the excess of the mean forward pressure against the piston on
 one side, during admission and expansion, above the mean back pressure
@@ -422,7 +423,7 @@ the double stroke.\par
 
 The area of this diagram, and consequently the work done with a given
 \textit{weight of steam}, may be increased by decreasing the amount of
-back pressure, \textit{i. e.}, lowering the back pressure line, also
+back pressure, \textit{i.e.}, lowering the back pressure line, also
 by raising the steam and expansion lines.  The former can be done by
 the use of a condenser and the latter by increasing the initial
 pressure and using an earlier cut-off.\par
@@ -436,6 +437,139 @@ be at \textit{JK}, and for the condensing engine at \textit{DE},
 giving an increase in the area of the condensing engine diagram, and,
 consequently, an increase in the work done represented by the area
 \textit{JKED}.\par
+
+\section{Definitions.}---\textit{Absolute Temperature}---Temperatures,
+estimated not from the ordinary zero, but from a point 461\degree{}
+below the zero of Fahrenheit's scale, are known as \textit{absolute
+  temperatures}, and the point, ---461\degree{} F.\ is called the
+\textit{absolute zero of temperature}.\par
+
+\textit{Absolute Pressure} is measured from the zero pressure of the
+atmosphere or 14.7 pounds per square inch below the pressure of the
+atmosphere when the mercury barometer stands at 30 inches.\par
+
+\textit{Specific Volume}.---The specific volume of steam is the number
+of cubic feet contained in one pound of steam at any given
+pressure.\par
+
+\textit{Relative Volume}.---The relative volume is the ratio which the
+volume of steam produced bears to the volume from which it was
+generated.\par
+
+\textit{Ratio of Expansion} is the ratio which the volume of a given
+quantity of steam bears to the volume it occupied before
+expansion.\par
+
+\textit{Saturated Steam} is steam at the greatest possible density for
+its pressure.  Steam in this condition is just at the point of
+condensation and any increase of pressure or decrease of temperature
+will cause some of it to be condensed.  The temperature of saturated
+steam is the temperature of the water with which it is in contact.
+For each pressure of saturated steam there is a fixed temperature.
+See "Saturated Steam Table" in Appendix.\par
+
+Many formulae have been produced to represent the results of Regnault
+and other experimenters on the relation between the pressure and the
+temperature of saturated steam.  They are all of a complicated nature;
+the simplest is probably the following:
+$\log\; p=5\times\frac{t-212}{t+367}+\log\; 14.7$,
+where \textit{p} is the
+absolute pressure in pounds per square inch and \textit{t} is the
+temperature in degrees Fahrenheit.\par
+
+For ready numerical calculations, a steam table, such as given in the
+Appendix, will be found more useful and convenient, but in the absence
+of such a table the above formula can be used for all practical
+purposes.\par
+
+The relation between the pressure and the volume of saturated steam
+may be approximately expressed by means of the formula:
+$pv^\frac{17}{16} = 475$, or more accurately, $pv^1.0616 = 479$, where
+\textit{p} is the absolute pressure in pounds per square inch and
+/textit{v} is the volume in cubic feet.\par
+
+\textit{superheated Steam}.---Steam \textit{free from the water} from
+which it was generated and supplied with additional heat becomes
+\textit{superheated} and approaches the condition of a perfect gas,
+while the temperature and density no longer correspond with the
+pressure as during evaporation.  The temperature of saturated steam in
+the presence of water cannot be raised without raising its pressure,
+but steam may be superheated without an increase of pressure, if it is
+free from water and is allowed to expand as the heat is added.\par
+
+\textit{Wet Steam}.---Ordinary steam carrying with it a greater or
+less proportion of water, either in suspension or otherwise mixed with
+it, is known as \textit{wet or moist steam}.  Wet steam will become
+drier or saturated steam become superheated if it falls in pressure
+without a corresponding loss of heat, as for instance, in the free
+expansion of the exhaust steam to the receivers of a multiple
+expansion engine.\par
+
+\textit{Expansive Action of Steam}.---From the expansive property
+which steam and other gases possess, a still further economy may be
+obtained by the performance of increased work from the same weight
+of steam.  By taking advantage of this property and cutting off the
+supply of steam at some point before the completion of the stroke, the
+steam will expand and continue to drive the piston with a gradually
+decreasing pressure, until it is exhausted into the atmosphere or the
+condenser.\par
+
+If a volume of gas be admitted to a cylinder, it will fill the
+cylinder and exert a definite pressure per square inch upon the
+piston.  If the piston is moved so as to increase the volume, the
+pressure on the piston will be less.  If the piston had been moved to
+decrease the volume, the gas would have been compressed, its
+\textit{density} or weight \textit{per cubic foot} have become
+greater, and with a greater pressure per square inch upon the piston.
+This action in the expansion of a perfect gas is expressed by Boyle's
+law as follows:\par
+
+"The volume of a given mass varies inversely as the pressure, provided
+by the temperature be kept constant;" or the product of the pressure
+\textit{p} and volume \textit{v} is constant, or $pv=constant$.\par
+
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ticks=none,
+        xmin=-2,
+        xmax=12,
+        ymin=-2,
+        ymax=12,
+        axis x line=none,
+        axis y line=none,
+      ]
+      \addplot[black, thick, domain=1.5:10]{15/x};
+      \addplot[black, thick, domain=0:10]coordinates{(0,10)(1.5,10)};
+      \addplot[black, thick, domain=0:10]coordinates{(10,0)(10,1.5)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(10,0)(0,0)};
+      \addplot[black, thick, domain=0:10]coordinates{(0,0)(0,10)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(1.5,10)(10,10)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(10,10)(10,1.5)};
+      \addplot[black, name path=ncbp, thin, dashed, domain=0:10]coordinates{(0,1.1)(10,1.1)};
+      \addplot[black, name path=cbp, thin, domain=0:10]coordinates{(0,.4)(10,.4)};
+      \addplot[black, thin, domain=-1:11]coordinates{(-.5,.75)(10.5,.75)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(10,1.5)(0,1.5)};
+      \addplot[black, thick, domain=0:10]coordinates{(1.5,0)(1.5,10)};
+      \addplot[black, thick, dashed, domain=0:10]coordinates{(5,0)(5,10)};
+      \addplot[black, thick, dashed, domain=5:10]{60/x-2};
+      \node at (axis cs:10.5,10) {$A'$};
+      \node at (axis cs:1.5,10.5) {$A$};
+      \node at (axis cs:-.5,10) {$P$};
+      \node at (axis cs:0,-.5) {$O$};
+      \node at (axis cs:10,-.5) {$V_2$};
+      \node at (axis cs:10.3,.3) {$L$};
+      \node at (axis cs:10.3,1.9) {$E$};
+      \node at (axis cs:5, 10.5) {$M$};
+      \node at (axis cs:5, -.5) {$K$};
+      \node at (axis cs:1.5, -.5) {$V_1$};
+      \node at (axis cs:10.3, 4) {$N$};
+    \end{axis}
+  \end{tikzpicture}
+  \caption*{\textsc{Fig.\ 3.}}
+\end{figure}
 
 
 
