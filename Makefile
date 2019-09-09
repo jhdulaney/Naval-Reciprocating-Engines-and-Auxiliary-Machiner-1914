@@ -17,3 +17,7 @@ builddir:
 clean:
 	@echo $@
 	@rm -rf $(build-path)
+
+
+check:
+	@chktex $(wd)/$(OBJ).tex
